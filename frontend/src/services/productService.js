@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = "https://real-tractors-and-equipments.onrender.com/api";
 
 // Public client – no auth header (used for GET /getAllPost)
 const publicClient = axios.create({ baseURL: API_BASE_URL });
