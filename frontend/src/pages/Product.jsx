@@ -16,15 +16,12 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        // Using axios directly to match user's previous implementation if needed, but keeping it robust
-        const response = await axios.get(`http://localhost:8080/api/postById/${id}`);
+        const response = await axios.get(`https://real-tractors-and-equipments.onrender.com/api/postById/${id}`);
         
-        // Defensive data extraction: handle { success: true, data: { ... } } or just { ... }
         const data = response.data.data || response.data.post || response.data;
         
         setProduct(data);
         
-        // Align default image selection with gallery priority (Thumbnail first)
         const mainImg = data.thumbnail?.url || data.files?.[0]?.url || "";
         setSelectedImage(mainImg);
       } catch (error) {
