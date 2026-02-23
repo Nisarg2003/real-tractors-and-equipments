@@ -31,6 +31,11 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-20 flex items-center justify-between px-6 lg:px-12 bg-[#1c1c1c] text-white z-50">
+      {/* Hamburger Icon for Mobile */}
+      <button className="md:hidden z-50" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <></> : <AiOutlineMenu size={30} />}
+      </button>
+
       {/* Logo */}
       <div className="text-xl md:text-3xl font-bold">
         <Link to="/" className="flex items-center gap-2">
@@ -50,11 +55,6 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-
-      {/* Hamburger Icon for Mobile */}
-      <button className="md:hidden z-50" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <></> : <AiOutlineMenu size={30} />}
-      </button>
 
       {/* Mobile Menu */}
       <div

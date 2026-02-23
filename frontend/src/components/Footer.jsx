@@ -50,8 +50,8 @@ const Footer = () => {
             Home
           </a>
           <span className="hidden md:inline text-gray-400">•</span>
-          <a href="/category" className="">
-            Category
+          <a href="/products" className="">
+            Inventory
           </a>
           <span className="hidden md:inline text-gray-400">•</span>
           <a href="/about" className="">
